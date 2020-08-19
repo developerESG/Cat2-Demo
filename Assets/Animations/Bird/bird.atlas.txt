@@ -1,0 +1,96 @@
+
+bird.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+beak
+  rotate: false
+  xy: 565, 831
+  size: 117, 105
+  orig: 117, 105
+  offset: 0, 0
+  index: -1
+eye_L
+  rotate: true
+  xy: 91, 851
+  size: 85, 93
+  orig: 85, 93
+  offset: 0, 0
+  index: -1
+eye_L_closed
+  rotate: true
+  xy: 186, 851
+  size: 85, 93
+  orig: 85, 93
+  offset: 0, 0
+  index: -1
+eye_R
+  rotate: true
+  xy: 281, 851
+  size: 85, 93
+  orig: 85, 93
+  offset: 0, 0
+  index: -1
+eye_R_closed
+  rotate: true
+  xy: 376, 851
+  size: 85, 93
+  orig: 85, 93
+  offset: 0, 0
+  index: -1
+foot_L
+  rotate: true
+  xy: 471, 846
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+foot_R
+  rotate: false
+  xy: 0, 852
+  size: 89, 84
+  orig: 89, 84
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 0, 0
+  size: 428, 489
+  orig: 428, 489
+  offset: 0, 0
+  index: -1
+head_feathers
+  rotate: false
+  xy: 684, 752
+  size: 208, 184
+  orig: 208, 184
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 324, 430
+  size: 532, 320
+  orig: 532, 320
+  offset: 0, 0
+  index: -1
+wing
+  rotate: true
+  xy: 0, 530
+  size: 319, 322
+  orig: 319, 322
+  offset: 0, 0
+  index: -1
+
+bird2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 0, 18
+  size: 646, 628
+  orig: 646, 628
+  offset: 0, 0
+  index: -1
