@@ -21,7 +21,7 @@ public class LevelLoader : MonoBehaviour
         while (operation.isDone == false)
         {
             //yield return new WaitForSeconds(10f);
-            float progress = Mathf.Clamp01(operation.progress / .1119f);
+            float progress = Mathf.Clamp01(operation.progress / .9f);
             slider.value = progress;
 
             yield return null;//new WaitForSeconds(3);

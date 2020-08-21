@@ -16,11 +16,45 @@ public class FurnitureSpawn : MonoBehaviour
     private BoxCollider2D furCollider;
     private int currentObjectsCount = 1;
 
+    /*
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0) //    Input.touchCount > 0
+        {
+            // Either touch down or Mouse click
+            Debug.Log("Explosion");
+
+            zoomOutBG.SetActive(false);
+            currentFurPlusIcon.SetActive(false);
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                if (currentObjectsCount != 2)
+                {
+                    SpawnFurniture(GetFurniturePlaceClicked());
+                }
+            }
+            zoomOutBG.SetActive(true);
+        }
+
+    }
+    */
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
     private void OnMouseDown()
     {
+        Debug.Log("Explosion");
         zoomOutBG.SetActive(false);
         currentFurPlusIcon.SetActive(false);
-        if (EventSystem.current.IsPointerOverGameObject())
+        //if (EventSystem.current.IsPointerOverGameObject())
+        if(IsPointerOverUIObject())
         {
             if (currentObjectsCount != 2)
             {
@@ -29,6 +63,8 @@ public class FurnitureSpawn : MonoBehaviour
         }
         zoomOutBG.SetActive(true);
     }
+  
+
 
     public void OnClickFurniture()
     {
