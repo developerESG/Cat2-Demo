@@ -61,8 +61,32 @@ public class CameraMove : MonoBehaviour
 
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            Vector3 _temp = Camera.main.transform.position + direction;  // dont remember if new or old. looks like old
-            _temp.x = _temp.x < leftLimit ? leftLimit : _temp.x;   //new
+            Vector3 _temp = Camera.main.transform.position + direction;
+
+            if (_temp.x < leftLimit)
+                _temp.x = leftLimit;
+            else
+                _temp.x = _temp.x;
+
+            if (_temp.x > rightLimit)
+                _temp.x = rightLimit;
+            else
+                _temp.x = _temp.x;
+
+            if (_temp.y > upperLimit)
+                _temp.y = upperLimit;
+            else
+                _temp.y = _temp.y;
+
+            if (_temp.y < bottomLimit)
+                _temp.y = bottomLimit;
+            else
+                _temp.y = _temp.y;
+
+            //_temp.x = _temp.x < leftLimit ? leftLimit : _temp.x;   
+            //_temp.x = _temp.x < rightLimit ? rightLimit : _temp.x;
+            //_temp.y = _temp.y < upperLimit ? upperLimit : _temp.y;
+            //_temp.y = _temp.y > bottomLimit ? bottomLimit : _temp.y;
             //same for right, upper, bottom
 
             Camera.main.transform.position = _temp;   //new

@@ -8559,8 +8559,8 @@ MonoBehaviour:
   zoomSpeed: 0.1
   mainCamera: {fileID: 519420032}
   leftLimit: 40
-  rightLimit: 40
-  upperLimit: 20
+  rightLimit: 60
+  upperLimit: 40
   bottomLimit: 20
 --- !u!1 &520413805
 GameObject:
