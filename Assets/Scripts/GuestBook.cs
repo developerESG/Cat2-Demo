@@ -10,6 +10,7 @@ public class GuestBook : MonoBehaviour
     [SerializeField] GameObject pugInfo;
     [SerializeField] GameObject birdInfo;
     public GameObject restartPartyMsg;
+    [SerializeField] GameObject furniture;
 
     public void openGuestbook()
     {
@@ -19,12 +20,10 @@ public class GuestBook : MonoBehaviour
 
     public void StartParty()
     {
-        if (party.partyDone == "y")
+        if (PartyStarted.partyDone == "y")
         {
             restartPartyMsg.SetActive(true);
-            Debug.Log("Let's get party started");
-        }
-        else
+        } else
         {
             openGuestbook();
         }
@@ -35,10 +34,18 @@ public class GuestBook : MonoBehaviour
         previousWindow.SetActive(false);
     }
 
-    //public void closeGuestbook()
-    //{
-    //    guestbook.SetActive(false);
-    //}
+    public void closeGuestbook()
+    {
+        guestbook.SetActive(false);
+
+    }
+
+    public void closeGuestbookOpenFurn()
+    {
+        guestbook.SetActive(false);
+        furniture.SetActive(true);
+
+    }
 
     public void ClosePreviousWindow()
     {
@@ -61,12 +68,11 @@ public class GuestBook : MonoBehaviour
         } 
   */
 
-        if(party.partyDone == "y")
+        if(PartyStarted.partyDone == "y")
         {
             pigInfo.SetActive(true);
             pugInfo.SetActive(true);
             birdInfo.SetActive(true);
-
         }
     }
 }

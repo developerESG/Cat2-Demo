@@ -16,10 +16,6 @@ public class CameraMove : MonoBehaviour
     [SerializeField] float upperLimit;
     [SerializeField] float bottomLimit;
 
-    void Start()
-    {
-
-    }
 
 
     void Update()
@@ -30,7 +26,6 @@ public class CameraMove : MonoBehaviour
             Mathf.Clamp(transform.position.y, bottomLimit, upperLimit),
             transform.position.z);
         */
-
 
 
         //if ((mainCamera.position.x > leftLimit && mainCamera.position.x < rightLimit) && (mainCamera.position.y < upperLimit && mainCamera.position.y > bottomLimit))
@@ -107,27 +102,5 @@ public class CameraMove : MonoBehaviour
             Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
         }
 
-    /*
-    Vector3 touchStart;
-
-    void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        }
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Camera.main.transform.position += direction;
-        }
-    }
-    */
 }
 

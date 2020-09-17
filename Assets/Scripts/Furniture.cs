@@ -13,6 +13,9 @@ public class Furniture : MonoBehaviour
     public GameObject backGround;
     public GameObject rewardWindow;
     public GameObject timer;
+    public GameObject shop;
+    public GameObject partyRequirmentPassive;
+
 
 
     public void openFurniture()
@@ -23,6 +26,7 @@ public class Furniture : MonoBehaviour
         furniture.SetActive(true);
         zoomActive = "y";
         backGround.SetActive(false);
+        //shop.SetActive(true);
     }
 
     public void closeFurniture()
@@ -32,6 +36,7 @@ public class Furniture : MonoBehaviour
         furniture.SetActive(false);
         zoomActive = "n";
         backGround.SetActive(true);
+        //shop.SetActive(false);
     }
 
     public void startParty()
@@ -43,6 +48,7 @@ public class Furniture : MonoBehaviour
         zoomActive = "y";
         backGround.SetActive(false);
         timer.SetActive(true);
+        partyRequirmentPassive.SetActive(false);
     }
 
     public void closeLockedRooms()
@@ -70,5 +76,13 @@ public class Furniture : MonoBehaviour
         PlayerPrefs.DeleteAll();
         party.partyDone = "n";
         SceneManager.LoadScene(0);
+        FurnRequirementCounter.medFurPlaced = false;
+        FurnRequirementCounter.carpetPlaced = false;
+        FurnRequirementCounter.bigFurPlaced = false;
+        FurnRequirementCounter.clockPlaced = false;
+        FurnRequirementCounter.chairPlaced = false;
+        FurnRequirementCounter.wallpaperPlaced = false;
+        FurnRequirementCounter.smallFurPlaced = false;
+
     }
 }
