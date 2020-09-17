@@ -68,7 +68,7 @@ public class Furniture : MonoBehaviour
     public void RestartGame()
     {
         PlayerPrefs.DeleteAll();
-        PartyStarted.partyDone = "n";
+        party.partyDone = "n";
         SceneManager.LoadScene(0);
     }
 }

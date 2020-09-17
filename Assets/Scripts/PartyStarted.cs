@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PartyStarted : MonoBehaviour
+public class party : MonoBehaviour
 {
     public float timeStart = 30;
     public Text textBox;

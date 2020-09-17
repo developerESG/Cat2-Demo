@@ -19,7 +19,7 @@ public class GuestBook : MonoBehaviour
 
     public void StartParty()
     {
-        if (PartyStarted.partyDone == "y")
+        if (party.partyDone == "y")
         {
             restartPartyMsg.SetActive(true);
             Debug.Log("Let's get party started");
@@ -61,7 +61,7 @@ public class GuestBook : MonoBehaviour
         } 
   */
 
-        if(PartyStarted.partyDone == "y")
+        if(party.partyDone == "y")
         {
             pigInfo.SetActive(true);
             pugInfo.SetActive(true);

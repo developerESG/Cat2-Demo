@@ -5,7 +5,7 @@ using UnityEngine;
 public class IconsClick : MonoBehaviour
 {
     [SerializeField] private Animator petstagIcon,partyIcon;
-    PartyStarted party;
+    party party;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,5 @@ public class IconsClick : MonoBehaviour
             partyIcon.SetBool("noPulse", true);
         }
 
-
-        party
     }
 }

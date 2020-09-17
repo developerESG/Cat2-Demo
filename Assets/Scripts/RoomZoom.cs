@@ -47,7 +47,7 @@ public class RoomZoom : MonoBehaviour
     {
         //UIClose.SetActiveRecursively(false);
 
-        if (PartyStarted.partyGoesOn == "y"){
+        if (party.partyGoesOn == "y"){
         }else
         {
         lockedRoom.SetActive(true);
