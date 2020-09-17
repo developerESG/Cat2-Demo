@@ -74,7 +74,7 @@ public class Furniture : MonoBehaviour
     public void RestartGame()
     {
         PlayerPrefs.DeleteAll();
-        party.partyDone = "n";
+        PartyStarted.partyDone = "n";
         SceneManager.LoadScene(0);
         FurnRequirementCounter.medFurPlaced = false;
         FurnRequirementCounter.carpetPlaced = false;
