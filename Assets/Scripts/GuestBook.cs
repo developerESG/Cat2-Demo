@@ -35,10 +35,10 @@ public class GuestBook : MonoBehaviour
         previousWindow.SetActive(false);
     }
 
-    public void closeGuestbook()
-    {
-        guestbook.SetActive(false);
-    }
+    //public void closeGuestbook()
+    //{
+    //    guestbook.SetActive(false);
+    //}
 
     public void ClosePreviousWindow()
     {
