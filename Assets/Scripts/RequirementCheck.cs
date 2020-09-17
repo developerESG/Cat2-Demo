@@ -15,7 +15,6 @@ public class RequirementCheck : MonoBehaviour
         if (checkFurnitureRequirementsToStartParty() == true)
         {
             doneRequirementMessage.SetActive(true);
-
         }
         else
         {

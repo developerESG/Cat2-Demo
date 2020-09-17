@@ -12,7 +12,25 @@ public class FurnRequirementCounter : MonoBehaviour
     [SerializeField] GameObject smallFurniture;
     [SerializeField] GameObject carpet;
     [SerializeField] GameObject wallpaper;
+    public static string furnReqPassiveCheck = "n";
+    public static bool carpetPlaced;
+    public static bool medFurPlaced;
+    public static bool chairPlaced;
+    public static bool bigFurPlaced;
+    public static bool smallFurPlaced;
+    public static bool clockPlaced;
+    public static bool wallpaperPlaced;
 
+    private void Update()
+    {
+        chairCheck();
+        clockCheck();
+        medFurnitCheck();
+        bigFurnitCheck();
+        smallFurnitCheck();
+        carpetCheck();
+        wallpaperCheck();
+    }
     public void allFurnitureCheck()
     {
         //chairCheck();
@@ -31,6 +49,7 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = chair.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            chairPlaced = true;
         }
     }
 
@@ -41,6 +60,7 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = clock.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            clockPlaced = true;
         }
     }
 
@@ -51,6 +71,9 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = medFurniture.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            medFurPlaced = true;
+            Debug.Log("medFurCounter works");
+            medFurPlaced = true;
         }
     }
 
@@ -61,6 +84,7 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = bigFurniture.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            bigFurPlaced = true;
         }
     }
 
@@ -71,6 +95,7 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = smallFurniture.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            smallFurPlaced = true;
         }
     }
 
@@ -81,6 +106,8 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = carpet.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            carpetPlaced = true;
+            Debug.Log("carpetCounter works");
         }
     }
 
@@ -91,6 +118,7 @@ public class FurnRequirementCounter : MonoBehaviour
         {
             Text txt = wallpaper.GetComponentInChildren<Text>();
             txt.text = "1/1";
+            wallpaperPlaced = true;
         }
     }
 }
