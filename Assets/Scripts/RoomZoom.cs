@@ -19,16 +19,14 @@ public class RoomZoom : MonoBehaviour
     private bool alreadyOfferedPartyStart;
     private bool alreadyOfferedPartyStartFinal;
     public GameObject passiveOfferToPartyStart;
-    
 
     public Transform currentView;
+    private bool trig;
 
 
-    public bool zoomActive;
     public Vector3[] target;
     public Camera cam;
     public float speed;
-    private bool check;
 
     void Start()
     {
@@ -58,8 +56,7 @@ public class RoomZoom : MonoBehaviour
             //Camera.main.orthographicSize = 7f;                                             //new Vector3(32f, 15f, -60f)
             //cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3, speed);
             //GameObject.Find("Main Camera").transform.position = new Vector3(32, 15, -60);//Vector3.Lerp(transform.position, new Vector3(32f, 15f, -60f), Time.deltaTime * 5); // new Vector3(32, 15, -60); old
-            zoomActive = true;
-            check = true;
+
 
             if (FurnRequirementCounter.medFurPlaced == true &&
                 FurnRequirementCounter.carpetPlaced == true &&
@@ -86,7 +83,6 @@ public class RoomZoom : MonoBehaviour
             }
         }
 
-        
         //Zoom out
         //vector3 safearea = gameobject.find("openhouse").transform.position;
 
@@ -103,17 +99,7 @@ public class RoomZoom : MonoBehaviour
         //    }
     }
 
-
-    public void LateUpdate()
-    {
-        if (Furniture.zoomActive == "y")
-        {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 7, speed);
-            cam.transform.position = new Vector3(openRoom.transform.position.x, openRoom.transform.position.y, cam.transform.position.z);
-
-        }
-    }
-    /*     void LateUpdate()
+   /*      void LateUpdate()
     {
         //transform.position = Vector3.Lerp(transform.position, new Vector3(32, 15, -60), Time.deltaTime * 3);
             if (Furniture.zoomActive == "y")
@@ -145,9 +131,6 @@ public class RoomZoom : MonoBehaviour
             {
                 i.SetActive(false);
             }
-
-            zoomActive = false;
-            check = false;
         }
     }
 }
