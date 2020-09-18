@@ -52,38 +52,7 @@ public class RoomZoom : MonoBehaviour
         if (Furniture.zoomActive == "y")
         {
 
-            // Zoom in
-            backgroundZoomOut.SetActive(true);
-            background.SetActive(false);
-            //Camera.main.orthographicSize = 7f;                                             //new Vector3(32f, 15f, -60f)
-            //cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3, speed);
-            //GameObject.Find("Main Camera").transform.position = new Vector3(32, 15, -60);//Vector3.Lerp(transform.position, new Vector3(32f, 15f, -60f), Time.deltaTime * 5); // new Vector3(32, 15, -60); old
-            zoomActive = true;
-            check = true;
-
-            if (FurnRequirementCounter.medFurPlaced == true &&
-                FurnRequirementCounter.carpetPlaced == true &&
-                alreadyOfferedPartyStart == false)
-            {
-                passiveOfferToPartyStart.SetActive(true);
-                alreadyOfferedPartyStart = true;
-                furniture.SetActive(false);
-            }
-
-            if (FurnRequirementCounter.medFurPlaced == true &&
-                FurnRequirementCounter.carpetPlaced == true &&
-                FurnRequirementCounter.bigFurPlaced == true &&
-                FurnRequirementCounter.clockPlaced == true &&
-                FurnRequirementCounter.chairPlaced == true &&
-                FurnRequirementCounter.wallpaperPlaced == true &&
-                FurnRequirementCounter.smallFurPlaced == true &&
-                alreadyOfferedPartyStartFinal == false &&
-                PartyStarted.partyDone == "n")
-            {
-                passiveOfferToPartyStart.SetActive(true);
-                alreadyOfferedPartyStartFinal = true;
-                furniture.SetActive(false);
-            }
+            ZomeIn();
         }
 
         
@@ -120,6 +89,42 @@ public class RoomZoom : MonoBehaviour
                 GameObject.Find("Main Camera").transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * 1);
     }
     */
+
+    public void ZomeIn()
+    {
+        // Zoom in
+        backgroundZoomOut.SetActive(true);
+        background.SetActive(false);
+        //Camera.main.orthographicSize = 7f;                                             //new Vector3(32f, 15f, -60f)
+        //cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 3, speed);
+        //GameObject.Find("Main Camera").transform.position = new Vector3(32, 15, -60);//Vector3.Lerp(transform.position, new Vector3(32f, 15f, -60f), Time.deltaTime * 5); // new Vector3(32, 15, -60); old
+        zoomActive = true;
+        check = true;
+
+        if (FurnRequirementCounter.medFurPlaced == true &&
+            FurnRequirementCounter.carpetPlaced == true &&
+            alreadyOfferedPartyStart == false)
+        {
+            passiveOfferToPartyStart.SetActive(true);
+            alreadyOfferedPartyStart = true;
+            furniture.SetActive(false);
+        }
+
+        if (FurnRequirementCounter.medFurPlaced == true &&
+            FurnRequirementCounter.carpetPlaced == true &&
+            FurnRequirementCounter.bigFurPlaced == true &&
+            FurnRequirementCounter.clockPlaced == true &&
+            FurnRequirementCounter.chairPlaced == true &&
+            FurnRequirementCounter.wallpaperPlaced == true &&
+            FurnRequirementCounter.smallFurPlaced == true &&
+            alreadyOfferedPartyStartFinal == false &&
+            PartyStarted.partyDone == "n")
+        {
+            passiveOfferToPartyStart.SetActive(true);
+            alreadyOfferedPartyStartFinal = true;
+            furniture.SetActive(false);
+        }
+    }
     public void ZoomOut()
     {
         //UIClose.SetActiveRecursively(false);
