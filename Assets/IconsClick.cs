@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IconsClick : MonoBehaviour
 {
-    [SerializeField] private Animator petstagIcon,partyIcon;
+    [SerializeField] private Animator petstagIcon,partyIcon,guestbook, furniture;
 
     // Start is called before the first frame update
     void Start()
     {
         partyIcon.SetBool("noPulse", true);
+        partyIcon.SetBool("noPulse", true);
+        guestbook.SetBool("noPulse", true);
+        furniture.SetBool("noPulse", true);
     }
 
     // Update is called once per frame
@@ -19,7 +23,10 @@ public class IconsClick : MonoBehaviour
         {
             petstagIcon.SetBool("noPulse", true);
             partyIcon.SetBool("noPulse", true);
+            guestbook.SetBool("noPulse", true);
+            furniture.SetBool("noPulse", true);
         }
 
     }
+
 }
