@@ -25,7 +25,7 @@ public class ClosePetstagramForceToOpen : MonoBehaviour
     {
         if (Furniture.partyDone == "y")
         {
-            guestBookInvatation.SetActive(true);
+            //guestBookInvatation.SetActive(true);
             Furniture.partyDone = "n";
         }
     }

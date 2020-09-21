@@ -8,12 +8,13 @@ public class followers : MonoBehaviour
 {
     [SerializeField] public Text followersText;
     private float followerCount;
+    [SerializeField] private GameObject popout;
     
 
 
     private void Update()
     {
-        if (PartyStarted.partyDone == "y")
+        if (PartyStarted.partyDone == "y" && !popout.activeInHierarchy)
         {
             StartCoroutine(GainFollowers());
             Debug.Log("Party was done. Gain followers!");

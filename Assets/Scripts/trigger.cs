@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class trigger : MonoBehaviour
 {
-
     public void Activator()
     {
         GetComponent<Animator>().SetBool("noPulse", false);
@@ -19,6 +18,7 @@ public class trigger : MonoBehaviour
 
     public void Delete()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
+
 }

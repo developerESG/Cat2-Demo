@@ -167,7 +167,7 @@ public class PartyStarted : MonoBehaviour
     public void CloseRewardMsgAfterParty()
     {
         partyEndMsg.SetActive(false);
-        forceToPetstagram.SetActive(true);
+        //forceToPetstagram.SetActive(true);
         Furniture.partyDone = "y";
     }
 }
