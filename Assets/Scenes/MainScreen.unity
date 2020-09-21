@@ -772,9 +772,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1124229759}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1124229764}
+        m_MethodName: Delete
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -783,16 +783,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 463903591}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 460933657}
+        m_MethodName: closeWindow
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &49468722
 MonoBehaviour:
@@ -21169,6 +21169,7 @@ GameObject:
   - component: {fileID: 1124229763}
   - component: {fileID: 1124229762}
   - component: {fileID: 1124229761}
+  - component: {fileID: 1124229764}
   m_Layer: 5
   m_Name: New Level
   m_TagString: Untagged
@@ -21257,6 +21258,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 11
   m_TargetDisplay: 0
+--- !u!114 &1124229764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124229759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa35fa4dd151b54aaab2a939e8da689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136929828
 GameObject:
   m_ObjectHideFlags: 0
