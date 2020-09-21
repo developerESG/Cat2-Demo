@@ -14,7 +14,7 @@ public class followers : MonoBehaviour
 
     private void Update()
     {
-        if (PartyStarted.partyDone == "y" && !popout.activeInHierarchy)
+        if (PartyStarted.partyDone == "y" && popout.activeSelf)//!popout.activeInHierarchy)
         {
             StartCoroutine(GainFollowers());
             Debug.Log("Party was done. Gain followers!");

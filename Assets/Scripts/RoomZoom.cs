@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class RoomZoom : MonoBehaviour
@@ -19,7 +20,10 @@ public class RoomZoom : MonoBehaviour
     private bool alreadyOfferedPartyStart;
     private bool alreadyOfferedPartyStartFinal;
     public GameObject passiveOfferToPartyStart;
-    
+    public GameObject passiveOfferYesBtn;
+    public GameObject passiveOfferNoBtn;
+    public GameObject passiveOfferOkBtn;
+
 
     public Transform currentView;
 
@@ -53,6 +57,7 @@ public class RoomZoom : MonoBehaviour
         {
 
             // Zoom in
+            openRoom.GetComponent<GraphicRaycaster> ().enabled = false;
             backgroundZoomOut.SetActive(true);
             background.SetActive(false);
             //Camera.main.orthographicSize = 7f;                                             //new Vector3(32f, 15f, -60f)
@@ -63,7 +68,8 @@ public class RoomZoom : MonoBehaviour
 
             if (FurnRequirementCounter.medFurPlaced == true &&
                 FurnRequirementCounter.carpetPlaced == true &&
-                alreadyOfferedPartyStart == false)
+                alreadyOfferedPartyStart == false &&
+                PartyStarted.partyGoesOn == "n")
             {
                 passiveOfferToPartyStart.SetActive(true);
                 alreadyOfferedPartyStart = true;
@@ -83,7 +89,10 @@ public class RoomZoom : MonoBehaviour
                 passiveOfferToPartyStart.SetActive(true);
                 alreadyOfferedPartyStartFinal = true;
                 furniture.SetActive(false);
-            }
+                passiveOfferYesBtn.SetActive(false);
+                passiveOfferNoBtn.SetActive(false);
+                passiveOfferOkBtn.SetActive(true);
+}
         }
 
         
@@ -123,7 +132,7 @@ public class RoomZoom : MonoBehaviour
     public void ZoomOut()
     {
         //UIClose.SetActiveRecursively(false);
-
+        openRoom.GetComponent<GraphicRaycaster>().enabled = true;
         if (PartyStarted.partyGoesOn == "y"){
         }else
         {
@@ -138,7 +147,7 @@ public class RoomZoom : MonoBehaviour
         furniture.SetActive(false);
         Furniture.zoomActive = "n";
         Camera.main.orthographicSize = 22.22f;
-        GameObject.Find("Main Camera").transform.position = new Vector3(51.2f, 21.24f, -10f);
+        GameObject.Find("Main Camera").transform.position = new Vector3(46f, 21.24f, -10f);
         GameObject[] uiForClose;
         uiForClose = GameObject.FindGameObjectsWithTag("FurniUI");
             foreach (GameObject i in uiForClose)
