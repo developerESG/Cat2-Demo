@@ -8,9 +8,14 @@ public class IconsClick : MonoBehaviour
     [SerializeField] private Animator petstagIcon,partyIcon,guestbook, furniture;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        petstagIcon.SetBool("noPulse", false);
+    }
+
     void Start()
     {
-        partyIcon.SetBool("noPulse", true);
+       
         partyIcon.SetBool("noPulse", true);
         guestbook.SetBool("noPulse", true);
         furniture.SetBool("noPulse", true);
