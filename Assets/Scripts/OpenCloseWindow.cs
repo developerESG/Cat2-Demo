@@ -6,6 +6,7 @@ public class OpenCloseWindow : MonoBehaviour
 {
 
     public GameObject window;
+    [SerializeField] GameObject newLVL;
 
     public void openWindow()
     {
@@ -24,6 +25,18 @@ public class OpenCloseWindow : MonoBehaviour
         window.SetActive(false);
     }
 
+    private void Update()
+    {
+        NewLevel();
+    }
+
+    public void NewLevel()
+    {
+        if(PartyStarted.partyDone == "y")
+        {
+            newLVL.SetActive(true);
+        }
+    }
 
 
 }
