@@ -22,11 +22,15 @@ public class followers : MonoBehaviour
     }
     IEnumerator GainFollowers()
     {
+
         while (followerCount < 6)
         {
             followersText.text = followerCount.ToString("0");
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             followerCount++;
+
+
         }
+
     }
 }

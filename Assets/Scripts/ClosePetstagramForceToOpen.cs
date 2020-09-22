@@ -9,13 +9,16 @@ public class ClosePetstagramForceToOpen : MonoBehaviour
     [SerializeField] GameObject petstagramPhotos;
     [SerializeField] GameObject guestBookInvatation;
     [SerializeField] Text numberOfFollowers;
+    public static bool petstagramPhotosShowd;
     private bool partyChecker;
+
 
     public void ClosePetstagramForceWindow()
     {
         petstagramForceWindow.SetActive(false);
 
-        if(Furniture.partyDone == "y"){
+        if(PartyStarted.partyDone == "y")
+        {
             petstagramPhotos.SetActive(true);
             numberOfFollowers.text = "5";
         }

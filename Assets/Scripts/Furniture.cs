@@ -15,6 +15,14 @@ public class Furniture : MonoBehaviour
     public GameObject timer;
     public GameObject shop;
     public GameObject partyRequirmentPassive;
+    public GameObject afterPartyStatistics;
+    public GameObject chairPlus;
+    public GameObject clockPlus;
+    public GameObject medFurPlus;
+    public GameObject bigFurPlus;
+    public GameObject carpet;
+    public GameObject smallFurPlus;
+    public GameObject wallpaper;
 
 
 
@@ -26,7 +34,30 @@ public class Furniture : MonoBehaviour
         furniture.SetActive(true);
         zoomActive = "y";
         backGround.SetActive(false);
+        if (PartyStarted.partyDone == "y")
+        {
+            GameObject[] uiToClose;
+            uiToClose = GameObject.FindGameObjectsWithTag("FurniUI");
+            foreach (GameObject i in uiToClose)
+            {
+                i.SetActive(false);
+            }
+        }
         //shop.SetActive(true);
+    }
+
+    public void openFurnitureAfterParty()
+    {
+        if (PartyStarted.partyDone == "y")
+        {
+            chairPlus.SetActive(false);
+            clockPlus.SetActive(false);
+            medFurPlus.SetActive(false);
+            bigFurPlus.SetActive(false);
+            carpet.SetActive(false);
+            smallFurPlus.SetActive(false);
+            wallpaper.SetActive(false);
+        }
     }
 
     public void closeFurniture()
@@ -83,6 +114,7 @@ public class Furniture : MonoBehaviour
         FurnRequirementCounter.chairPlaced = false;
         FurnRequirementCounter.wallpaperPlaced = false;
         FurnRequirementCounter.smallFurPlaced = false;
+        afterPartyStatistics.SetActive(false);
 
     }
 }
