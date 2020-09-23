@@ -17,9 +17,9 @@ public class ClosePetstagramForceToOpen : MonoBehaviour
     {
         petstagramForceWindow.SetActive(false);
 
-        if(PartyStarted.partyDone == "y")
+        if(PartyStarted.partyDone == "y" && Furniture.accountSelected == "y")
         {
-            petstagramPhotos.SetActive(true);
+            //petstagramPhotos.SetActive(true);
             numberOfFollowers.text = "5";
         }
     }

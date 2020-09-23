@@ -9,6 +9,7 @@ public class Furniture : MonoBehaviour
     public GameObject BotHudHide;
     public static string zoomActive = "n";
     public static string partyDone = "n";
+    public static string accountSelected = "n";
     public GameObject furniture;
     public GameObject backGround;
     public GameObject rewardWindow;
@@ -25,7 +26,10 @@ public class Furniture : MonoBehaviour
     public GameObject wallpaper;
 
 
-
+    public void selectAccount()
+    {
+        accountSelected = "y";
+    }
     public void openFurniture()
     {
         closeLockedRooms();

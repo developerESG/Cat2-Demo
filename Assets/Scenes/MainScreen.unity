@@ -795,6 +795,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1207039760}
+        m_MethodName: startFollowerCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &49468722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22773,6 +22784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followersText: {fileID: 1207039761}
   popout: {fileID: 463903591}
+  afterPartyStatistics: {fileID: 2085069112}
+  closeButton1: {fileID: 1219630864}
 --- !u!114 &1207039761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30182,6 +30195,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 366697399}
+        m_MethodName: StartParty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1647547018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30888,13 +30912,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688026035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af702c8aeb7e32144b7299854eaf39d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   followersText: {fileID: 1207039761}
   popout: {fileID: 1124229759}
+  afterPartyStatistics: {fileID: 0}
+  closeButton1: {fileID: 0}
 --- !u!1 &1689506595
 GameObject:
   m_ObjectHideFlags: 0
