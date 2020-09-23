@@ -7760,6 +7760,7 @@ GameObject:
   - component: {fileID: 398653411}
   - component: {fileID: 398653412}
   - component: {fileID: 398653413}
+  - component: {fileID: 398653414}
   m_Layer: 5
   m_Name: PetstagramButton
   m_TagString: Untagged
@@ -7952,6 +7953,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa35fa4dd151b54aaab2a939e8da689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &398653414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398653405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 398653413}
+          m_MethodName: DeActivator
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  delegates: []
 --- !u!1 &399014431
 GameObject:
   m_ObjectHideFlags: 0
@@ -8276,8 +8306,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 425793760}
-          m_MethodName: 
+        - m_Target: {fileID: 425793766}
+          m_MethodName: DeActivator
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8669,6 +8699,7 @@ GameObject:
   - component: {fileID: 442396240}
   - component: {fileID: 442396239}
   - component: {fileID: 442396243}
+  - component: {fileID: 442396244}
   m_Layer: 5
   m_Name: PartyIcon
   m_TagString: Untagged
@@ -8850,6 +8881,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa35fa4dd151b54aaab2a939e8da689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &442396244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442396235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 442396243}
+          m_MethodName: DeActivator
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  delegates: []
 --- !u!1 &449159962
 GameObject:
   m_ObjectHideFlags: 0
@@ -14948,6 +15008,8 @@ MonoBehaviour:
   partyIcon: {fileID: 442396239}
   guestbook: {fileID: 425793765}
   furniture: {fileID: 1646029338}
+  newItems: {fileID: 636935734}
+  guestBookIcon: {fileID: 425793762}
 --- !u!4 &761254252
 Transform:
   m_ObjectHideFlags: 0
@@ -25704,6 +25766,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 425793766}
+        m_MethodName: Activator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &1381741699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29742,6 +29815,7 @@ GameObject:
   - component: {fileID: 1646029338}
   - component: {fileID: 1646029339}
   - component: {fileID: 1646029340}
+  - component: {fileID: 1646029341}
   m_Layer: 5
   m_Name: FurnitureButton
   m_TagString: Untagged
@@ -29924,6 +29998,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  delegates: []
+--- !u!114 &1646029341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646029333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
   delegates: []
 --- !u!1 &1647343319
 GameObject:
@@ -32421,40 +32509,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 442396243}
-        m_MethodName: DeActivator
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 398653413}
-        m_MethodName: DeActivator
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 425793766}
-        m_MethodName: DeActivator
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1646029339}
         m_MethodName: DeActivator
         m_Mode: 1
         m_Arguments:
@@ -33965,6 +34020,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 366697399}
         m_MethodName: closeGuestbook
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 442396243}
+        m_MethodName: Activator
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
