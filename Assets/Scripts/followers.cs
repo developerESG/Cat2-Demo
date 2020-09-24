@@ -28,12 +28,12 @@ public class followers : MonoBehaviour
 
     private IEnumerator Verify()
     {
-        print(PartyStarted.partyDone);
+
         yield return new WaitForEndOfFrame();
         if (PartyStarted.partyDone == "y" /*&& popout.activeSelf*/)//!popout.activeInHierarchy)
         {
             StartCoroutine(GainFollowers());
-            Debug.Log("Party was done. Gain followers!");
+
         }
     }
 
@@ -57,6 +57,7 @@ public class followers : MonoBehaviour
             closeButton2.GetComponent<Button>().enabled = false;
             //closeButton2.enabled;
             yield return new WaitForSeconds(0.5f);
+            
             followersText.text = i.ToString("0");
             //followerCount++;
             if (i == 5)

@@ -7,6 +7,7 @@ public class OpenCloseWindow : MonoBehaviour
 
     public GameObject window;
     [SerializeField] GameObject newLVL;
+    //public GameObject robertPetstagram;
     public bool newLvLOnce;
 
     private void Start()
@@ -23,9 +24,29 @@ public class OpenCloseWindow : MonoBehaviour
         {
             i.SetActive(false);
         }
+        NewLevel();
+        window.SetActive(true);
+        /*
+        if (PartyStarted.partyDone == "y" && newLvLOnce == true)
+        {
+            robertPetstagram.SetActive(false);
+            newLVL.SetActive(true);
+            newLvLOnce = false;
+
+        }
+        else
+        {
+            window.SetActive(true);
+        }
+        */
+    }
+/*
+    public void openPestragramAfterNewLvl()
+    {
+        robertPetstagram.SetActive(true);
         window.SetActive(true);
     }
-
+    */
     public void closeWindow()
     {
         window.SetActive(false);
@@ -33,7 +54,7 @@ public class OpenCloseWindow : MonoBehaviour
 
     private void Update()
     {
-        NewLevel();
+       // NewLevel();
     }
 
     public void NewLevel()
