@@ -2672,11 +2672,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2889a6121436ee248b5a12dcc1ee7986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guestbook: {fileID: 172195216}
+  guestbook: {fileID: 889870829}
   previousWindow: {fileID: 0}
   pigInfo: {fileID: 554355786}
-  pugInfo: {fileID: 0}
-  birdInfo: {fileID: 0}
+  pugInfo: {fileID: 172195216}
+  birdInfo: {fileID: 172195216}
   restartPartyMsg: {fileID: 0}
   furniture: {fileID: 0}
 --- !u!1 &174685084
@@ -4598,7 +4598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100.72, y: 23.75}
+  m_AnchoredPosition: {x: -100.72, y: 34.3}
   m_SizeDelta: {x: 92.83798, y: 95.880554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254264919
@@ -5500,12 +5500,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!1 &303962740
 GameObject:
@@ -6267,6 +6267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 343810409}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!1 &353094299
 GameObject:
@@ -7614,6 +7615,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 398653413}
+          m_MethodName: ClickCounter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   delegates: []
 --- !u!1 &399014431
 GameObject:
@@ -8035,7 +8047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &433644922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8540,6 +8552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 460933656}
   newLVL: {fileID: 1124229759}
+  RobertP: {fileID: 463903591}
   newLvLOnce: 0
 --- !u!4 &460933658
 Transform:
@@ -10842,7 +10855,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566561238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.53442}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1139826531}
@@ -10851,7 +10864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 1.2620001, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 370.73, y: 7.9}
+  m_AnchoredPosition: {x: 355.6, y: 17.8}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566561240
@@ -10962,6 +10975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 572648854}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!4 &572648856
 Transform:
@@ -11436,7 +11450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &610895312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11844,6 +11858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 620654514}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!1 &634593020
 GameObject:
@@ -14254,10 +14269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd803e1434937d04c986c5c56c098393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petstagIcon: {fileID: 398653412}
   partyIcon: {fileID: 442396239}
   guestbook: {fileID: 425793765}
   furniture: {fileID: 1646029338}
+  petstagIcon: {fileID: 398653412}
   newItems: {fileID: 636935734}
   guestBookIcon: {fileID: 425793762}
 --- !u!4 &761254252
@@ -14713,6 +14728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 778320791}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!4 &778320793
 Transform:
@@ -14747,7 +14763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &784081768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15403,12 +15419,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!1 &827321255
 GameObject:
@@ -16723,6 +16739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 865715352}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!1 &878169404
 GameObject:
@@ -18077,12 +18094,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!1 &959893659
 GameObject:
@@ -18786,9 +18803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2889a6121436ee248b5a12dcc1ee7986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guestbook: {fileID: 1011461453}
+  guestbook: {fileID: 889870829}
   previousWindow: {fileID: 0}
-  pigInfo: {fileID: 399014431}
+  pigInfo: {fileID: 297435344}
   pugInfo: {fileID: 0}
   birdInfo: {fileID: 0}
   restartPartyMsg: {fileID: 0}
@@ -21972,6 +21989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followersText: {fileID: 1207039761}
+  followersHUD: {fileID: 657266443}
   popout: {fileID: 463903591}
   afterPartyStatistics: {fileID: 2085069112}
   closeButton1: {fileID: 1219630864}
@@ -27876,18 +27894,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 398653413}
-        m_MethodName: DeActivator
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 425793766}
+      - m_Target: {fileID: 1646029339}
         m_MethodName: DeActivator
         m_Mode: 1
         m_Arguments:
@@ -27909,8 +27916,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1646029339}
+      - m_Target: {fileID: 425793766}
         m_MethodName: DeActivator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 398653413}
+        m_MethodName: PetstagramCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27999,9 +28017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2889a6121436ee248b5a12dcc1ee7986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guestbook: {fileID: 1598933603}
+  guestbook: {fileID: 889870829}
   previousWindow: {fileID: 0}
-  pigInfo: {fileID: 978966432}
+  pigInfo: {fileID: 1598933603}
   pugInfo: {fileID: 0}
   birdInfo: {fileID: 0}
   restartPartyMsg: {fileID: 0}
@@ -29627,7 +29645,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688026035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000023294}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1207039759}
@@ -29636,7 +29654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 1.2620001, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 354, y: -20.5}
+  m_AnchoredPosition: {x: 338.9, y: -0.1}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688026037
@@ -29692,6 +29710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followersText: {fileID: 1207039761}
+  followersHUD: {fileID: 0}
   popout: {fileID: 1124229759}
   afterPartyStatistics: {fileID: 0}
   closeButton1: {fileID: 0}
@@ -31243,6 +31262,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 398653413}
+        m_MethodName: DeActivator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 398653413}
+        m_MethodName: PetstagramCheck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1742392687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31816,6 +31857,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799339100}
+  m_CullTransparentMesh: 0
+--- !u!1 &1800966413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800966414}
+  - component: {fileID: 1800966416}
+  - component: {fileID: 1800966415}
+  m_Layer: 5
+  m_Name: PartyPhoto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1800966414
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800966413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0648928, y: 1.0335723, z: 0.83521}
+  m_Children: []
+  m_Father: {fileID: 2085069113}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 69.3, y: -47}
+  m_SizeDelta: {x: 317.08447, y: 142}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1800966415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800966413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6a10f1eaab0fc55429f8d52a16140eae, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1800966416
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800966413}
   m_CullTransparentMesh: 0
 --- !u!1 &1804665949
 GameObject:
@@ -33792,6 +33905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 1904073886}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!4 &1904073888
 Transform:
@@ -36779,6 +36893,7 @@ RectTransform:
   - {fileID: 433644922}
   - {fileID: 784081768}
   - {fileID: 610895312}
+  - {fileID: 1800966414}
   m_Father: {fileID: 2012795522}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37319,6 +37434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 2104302845}
   newLVL: {fileID: 0}
+  RobertP: {fileID: 0}
   newLvLOnce: 0
 --- !u!1 &2104867594
 GameObject:

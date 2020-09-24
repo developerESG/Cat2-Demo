@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class followers : MonoBehaviour
 {
-    [SerializeField] public Text followersText;
+    [SerializeField] public Text followersText, followersHUD;
     private float followerCount;
     [SerializeField] private GameObject popout;
     public GameObject afterPartyStatistics;
@@ -59,6 +59,7 @@ public class followers : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             
             followersText.text = i.ToString("0");
+            followersHUD.text = i.ToString("0");
             //followerCount++;
             if (i == 5)
             closeButton2.GetComponent<Button>().enabled = true;

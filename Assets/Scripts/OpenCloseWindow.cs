@@ -6,7 +6,7 @@ public class OpenCloseWindow : MonoBehaviour
 {
 
     public GameObject window;
-    [SerializeField] GameObject newLVL;
+    [SerializeField] GameObject newLVL, RobertP;
     //public GameObject robertPetstagram;
     public bool newLvLOnce;
 
@@ -55,6 +55,7 @@ public class OpenCloseWindow : MonoBehaviour
     private void Update()
     {
        // NewLevel();
+      
     }
 
     public void NewLevel()
@@ -64,6 +65,7 @@ public class OpenCloseWindow : MonoBehaviour
         {
             newLVL.SetActive(true);
             newLvLOnce = false;
+            RobertP.SetActive(false);
            
         }
     }
