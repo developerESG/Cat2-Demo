@@ -2653,7 +2653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172195216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7761383, y: 3.0663438, z: -1425.4469}
+  m_LocalPosition: {x: 55.3, y: 3.0663438, z: -1425.4469}
   m_LocalScale: {x: 9.134827, y: 9.134827, z: 9.134827}
   m_Children:
   - {fileID: 955896466}
@@ -5620,7 +5620,6 @@ GameObject:
   - component: {fileID: 307150413}
   - component: {fileID: 307150412}
   - component: {fileID: 307150411}
-  - component: {fileID: 307150410}
   m_Layer: 5
   m_Name: PugInfoButton
   m_TagString: Untagged
@@ -5647,25 +5646,6 @@ RectTransform:
   m_AnchoredPosition: {x: 179.4, y: 49.3}
   m_SizeDelta: {x: 109.96738, y: 92.20833}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &307150410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307150408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2889a6121436ee248b5a12dcc1ee7986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guestbook: {fileID: 0}
-  previousWindow: {fileID: 0}
-  pigInfo: {fileID: 0}
-  pugInfo: {fileID: 0}
-  birdInfo: {fileID: 0}
-  restartPartyMsg: {fileID: 0}
-  furniture: {fileID: 0}
 --- !u!114 &307150411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5706,16 +5686,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 307150410}
-        m_MethodName: openGuestbook
-        m_Mode: 1
+      - m_Target: {fileID: 172195216}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &307150412
 MonoBehaviour:
@@ -7616,7 +7596,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 398653413}
-          m_MethodName: ClickCounter
+          m_MethodName: PetstagClickCounter
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7682,7 +7662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b7756c71e7540f6419e59fb117418695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1c8dde48ea63b84c824bdd48c09bfad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7885,6 +7865,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 425793766}
+          m_MethodName: GBClickCounter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   delegates: []
 --- !u!1 &432677103
 GameObject:
@@ -7898,7 +7889,6 @@ GameObject:
   - component: {fileID: 432677108}
   - component: {fileID: 432677107}
   - component: {fileID: 432677106}
-  - component: {fileID: 432677105}
   m_Layer: 5
   m_Name: BirdInfoButton
   m_TagString: Untagged
@@ -7925,25 +7915,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12.8, y: 48.8}
   m_SizeDelta: {x: 106.90045, y: 115.550964}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &432677105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432677103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2889a6121436ee248b5a12dcc1ee7986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guestbook: {fileID: 0}
-  previousWindow: {fileID: 0}
-  pigInfo: {fileID: 0}
-  pugInfo: {fileID: 0}
-  birdInfo: {fileID: 0}
-  restartPartyMsg: {fileID: 0}
-  furniture: {fileID: 0}
 --- !u!114 &432677106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7984,16 +7955,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 432677105}
-        m_MethodName: openGuestbook
-        m_Mode: 1
+      - m_Target: {fileID: 1011461453}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &432677107
 MonoBehaviour:
@@ -8319,6 +8290,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 442396243}
           m_MethodName: DeActivator
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 442396243}
+          m_MethodName: PartyClickCounter
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14896,9 +14878,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1598933605}
-        m_MethodName: closeGuestbook
-        m_Mode: 1
+      - m_Target: {fileID: 280441614}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1598933603}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18784,7 +18777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011461453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7761383, y: 3.0663438, z: -1425.4469}
+  m_LocalPosition: {x: 13.4, y: 31.4, z: -1425.4469}
   m_LocalScale: {x: 9.134827, y: 9.134827, z: 9.134827}
   m_Children:
   - {fileID: 297435345}
@@ -24238,7 +24231,7 @@ RectTransform:
   m_GameObject: {fileID: 1346903014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4375, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 297435345}
   m_RootOrder: 2
@@ -24288,9 +24281,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1011461455}
-        m_MethodName: closeGuestbook
-        m_Mode: 1
+      - m_Target: {fileID: 280441614}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1011461453}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26598,7 +26602,6 @@ GameObject:
   - component: {fileID: 1512125226}
   - component: {fileID: 1512125225}
   - component: {fileID: 1512125224}
-  - component: {fileID: 1512125223}
   m_Layer: 5
   m_Name: PigInfoButton
   m_TagString: Untagged
@@ -26625,25 +26628,6 @@ RectTransform:
   m_AnchoredPosition: {x: -174.2, y: 54.5}
   m_SizeDelta: {x: 107.849304, y: 106.14935}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1512125223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512125221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2889a6121436ee248b5a12dcc1ee7986, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guestbook: {fileID: 0}
-  previousWindow: {fileID: 0}
-  pigInfo: {fileID: 0}
-  pugInfo: {fileID: 0}
-  birdInfo: {fileID: 0}
-  restartPartyMsg: {fileID: 0}
-  furniture: {fileID: 0}
 --- !u!114 &1512125224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26684,16 +26668,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1512125223}
-        m_MethodName: openGuestbook
-        m_Mode: 1
+      - m_Target: {fileID: 1598933603}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1512125225
 MonoBehaviour:
@@ -27905,8 +27889,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 442396243}
-        m_MethodName: DeActivator
+      - m_Target: {fileID: 398653413}
+        m_MethodName: PetstagramCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27917,7 +27901,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 425793766}
-        m_MethodName: DeActivator
+        m_MethodName: GBCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27927,8 +27911,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 398653413}
-        m_MethodName: PetstagramCheck
+      - m_Target: {fileID: 442396243}
+        m_MethodName: PartygetsChecked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29916,7 +29900,7 @@ RectTransform:
   m_GameObject: {fileID: 1695699372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3375, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 955896466}
   m_RootOrder: 2
@@ -29966,9 +29950,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 172195218}
-        m_MethodName: closeGuestbook
-        m_Mode: 1
+      - m_Target: {fileID: 280441614}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 172195216}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
